@@ -1,0 +1,318 @@
+{%  extends 'base.html' %}
+{% block Contener %}
+        <style>
+        
+            body{
+                text-align: center;
+                background-color:#f1fdf2;
+                font-family: monospace;
+                font-size: 1rem;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h4{
+                border-radius: 25px;
+                border: 1px solid lawngreen;
+                color: lawngreen;
+                padding: 10px;
+                box-shadow: 2px 2px 3px #bebebe;
+                display: inline-flex;
+                text-align: center;
+                margin: 20px auto;
+            }
+
+            h4:hover{
+                background-color: lawngreen;
+                color: white;
+                cursor: pointer;
+            }
+
+            .image{
+                display: flex;
+                justify-content: center;
+                width: auto;
+                height: 100%;
+                padding:30px;
+                background-color: white;
+                box-shadow: 3px 2px 2px 2px rgb(195, 241, 148);
+                border-radius: 25px;
+                
+
+            }
+
+            .image img{
+                border-radius: 15px;
+                max-width: 100%;
+            }
+            .image h1{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: lawngreen;
+                text-align: center;
+                z-index: 2;
+                width: 100%;
+                font-size: 4rem;
+                margin: 0;
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+               
+                padding: 50px 40px;
+                border-radius: 15px;
+                display: inline-block;
+            }
+
+            
+            .Ensemble-service{
+                box-shadow: 3px 6px 9px #bebebe;
+                border-radius: 50px;
+                display: flex;
+                flex-wrap: wrap; 
+                gap: 40px;
+                justify-content: center; 
+                padding: 40px;
+                background: white;
+            }
+
+            
+            .services{
+                flex: 0 0 calc(33.33% - 40px); 
+                min-width: 250px; 
+                max-width: 350px; 
+                background: white;
+                border-radius: 20px;
+                box-shadow: 3px 6px 9px rgb(199, 250, 148);
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .services .image-service img{
+                height: 250px;
+                width: 100%; 
+                object-fit: cover; 
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .services .explication p{
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border: 1px solid lawngreen;
+                font-weight: bold;
+                color: lawngreen;
+                text-shadow: 1px 1px 2px #888888;
+                padding: 15px;
+                margin: 0;
+                background: white;
+            }
+
+            .services .explication p:hover{
+                background-color: lawngreen;
+                color: white;
+                cursor: pointer;
+            }
+
+            .services .description{
+                display: flex;
+                justify-content: center;
+                padding: 15px;
+            }
+
+            .services .description p{
+                text-align: justify;
+                margin: 0;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            .ligne hr{
+               display: flex;
+               margin: 10px;
+            }
+            .LIENS{
+                background-color: rgb(51, 102, 1);
+                color: white;
+                font-weight: bold;
+                display: flex;
+                padding: 50px;
+                gap: 50px;
+                justify-content: space-between;
+
+            }
+
+            .LIENS .icon{
+                
+                display: grid;
+                position: relative;
+                padding: 20px;
+                border: 1px solid lawngreen;
+                gap: 20px;
+                border-radius: 20px;
+                background-color:rgb(126, 158, 94) ; 
+                transition: all 1s ease;
+            }
+            .LIENS .icon:hover{
+                  background-color: rgb(114, 143, 86);
+                  cursor: pointer;
+                  transform: translateY(-9px);
+
+
+            }
+            .Text{
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                font-family: monospace;
+                margin-top: 3px;
+            }
+          
+            .icon a{
+                font-family: monospace;
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+                
+
+            }
+            
+        
+            @media (max-width: 1024px) {
+                .services {
+                    flex: 0 0 calc(50% - 40px); 
+                }
+            }
+
+            @media (max-width: 600px) {
+                .services {
+                    flex: 0 0 100%; 
+                }
+                
+                .Ensemble-service {
+                    padding: 20px;
+                    gap: 20px;
+                }
+            }
+        </style>
+
+            
+
+
+
+        <body>
+            <div class="tout">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/ecran.jpg') }}" >
+                    <h1>OASIS-Santé</h1>
+                </div>
+
+            </div>    
+
+            <h4>Nos Services</h4>
+            <div class="Ensemble-service">
+                <div class="services" id="services">
+
+                    <div class="image-service">
+                        <img src="{{ url_for('static', filename='images/medecine generale.jpg') }}" alt="">
+                    </div>
+                    <div class="explication">
+                        <p>Médecine Générale et Spécialisée</p>
+                    </div>
+                    <div class="description">    
+                        <p>Prise en charge des maladies internes (diabète, hypertension,<br> infections...), cardiologie, neurologie, pneumologie,<br> gastro-entérologie, néphrologie (dont hémodialyse), rhumatologie,<br> dermatologie, endocrinologie</p>
+                    </div>
+                </div>
+                <div class="services">
+                    <div class="image-service">
+                        <img src="{{ url_for('static', filename='images/chirurgie.jpg') }}" alt="">
+                    </div >
+                    <div class="explication">
+                        <p>Chirurgie</p>
+                    </div>
+                    <div class="description">    
+                        <p>Chirurgie générale, orthopédique, digestive, cardiovasculaire, urologique, plastique et reconstructrice. Inclut souvent des services de chirurgie ambulatoire où le patient rentre chez lui le jour même</p>
+                    </div>
+                </div>
+
+                <div class="services">
+                    <div class="image-service">
+                        <img src="{{ url_for('static', filename='images/soin inten.jpg') }}" alt="">
+                    </div>
+                    <div class="explication">
+                        <p>Urgences et Soins Intensifs</p>
+                    </div>
+                    <div class="description">    
+                        <p>Service des Urgences (24h/24), SMUR pour les interventions extérieures, unités de soins intensifs (USI), de réanimation polyvalente, soins coronariens (USIC), et de surveillance continue</p>
+                    </div>
+                </div>
+
+                <div class="services">
+                    <div class="image-service">
+                        <img src="{{ url_for('static', filename='images/mere.jpg') }}" alt="">
+                    </div>
+                    <div class="explication">
+                        <p>Mère et Enfant</p>
+                    </div>
+                    <div class="description">    
+                        <p>Gynécologie-obstétrique, maternité, soins néonataux (y compris réanimation), et services de pédiatrie générale et spécialisée</p>
+                    </div>
+                </div>
+
+                <div class="services">
+                    <div class="image-service">
+                        <img src="{{ url_for('static', filename='images/psy.jpg') }}" alt="">
+                    </div>
+                    <div class="explication">
+                        <p>Santé Mentale et Psychiatrie</p>
+                    </div>    
+                    <div class="description">    
+                        <p>Services pour adultes, enfants et adolescents, incluant des consultations, des hospitalisations complètes, et parfois des services d'addictologie</p>
+                    </div>
+                </div>
+
+                <div class="services">
+                    <img src="" alt="">
+                    <div class="explication">
+                    <p>Spécialités Spécifiques</p>
+                    </div>
+                    <div class="description">
+                        <p>Cancérologie (chimiothérapie, radiothérapie), soins palliatifs, médecine gériatrique (pour les personnes âgées), médecine physique et de réadaptation (rééducation fonctionnelle, kinésithérapie)</p>
+                    </div>
+                </div>
+            </div>
+    
+
+            </div>
+            <div class="ligne">
+
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <footer>
+                <div class="LIENS" id="contact">
+                    <div class="Text">
+                        <h3>Contact</h3>
+                    </div>
+                    
+                    <div>
+                        <div class="icon">
+                           <i class="fab fa-whatsapp"></i>
+                           <a href=" https://wa.me/+242050696486 ">WhatSapp</a>
+                        </div>
+                         
+                        <div class="icon">
+                            <i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61550942935125&locale=fr_FR">Facebook</a>
+                        </div>
+                         <div class="icon">
+                             <i class="fas fa-phone"></i>
+                             <p>+242 05 069 64 86</p>
+                             
+                         </div>
+                    </div>
+
+                </div>
+            </footer>
+        </body>
+{% endblock %}        

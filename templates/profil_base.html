@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block Contener %}         
+         
+         
+         <style>
+               body{
+               background-color: #f1fdf2; 
+               }
+               .Liens{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    padding-top: 15vh;
+                    width: 39vh;
+                    height: 100%;
+                    background-color:#f1fdf2;
+                    box-shadow: 2px 3px 6px #aff3b5; 
+                    position: fixed;
+               
+               }
+               .Liens a{
+                    display: flex;
+                    text-decoration: none;
+                    font-family: monospace;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    color: rgb(110, 110, 110);
+                    justify-content: center;  
+                    padding: 10px;
+                    border-top: 1px solid rgb(202, 200, 200);
+                    border-bottom: 1px solid rgb(202, 200, 200);
+                    background-color: lightgray;
+               }
+               .Liens a:hover {
+                    background-color: rgb(235, 232, 232);
+                    
+               }
+          </style>
+
+          <body>
+          <div class="Liens">
+
+               <div class="lien_lat">
+                    <a href="">Chat Bot</a>
+               </div>
+
+               <div class="lien_lat">
+                    <a href="">Tableau de bord</a>
+               </div>  
+
+               <div class="lien_lat">
+                    <a href="">Historique d'achat</a>
+               </div>
+
+               <div class="lien_lat">
+               <a href=""> Historique de Consultations</a> 
+
+               </div>
+          </div>
+
+          </body>
+{% endblock %}          

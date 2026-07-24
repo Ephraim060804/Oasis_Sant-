@@ -1,0 +1,112 @@
+        
+{% extends 'base.html' %}        
+
+{% block Contener %}
+        <style>
+            body {
+                    background-color: #f1fdf2;
+                    padding-top: 80px; 
+                    min-height: 100vh;
+                }
+                h4{
+                    display: flex;
+                    justify-content: center;
+                    padding: 30px;
+                    font-family: monospace;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    background:transparent;
+                    border: 1px solid rgb(212, 219, 219);
+                    color: rgb(152, 153, 153);;
+                    text-shadow: 1px 2px 3px black;
+                    border-radius: 50px;
+                
+                }
+            .formulaire{
+                padding: 20px ;
+                display: flex;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(212, 219, 219);
+                flex-wrap: wrap;
+                flex-direction: column;
+                border-radius: 20px;
+                justify-content: center;
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 1rem;
+                box-shadow: 4px 6px 8px lightgrey;
+                width: 23rem;
+                margin: 20px auto;
+                color: rgb(109, 110, 110);
+                gap: 10px;
+                
+                
+            }
+            .formulaire input{
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+                width: 20rem;
+                background: transparent;
+                border: 0.5px solid rgb(212, 219, 219);;
+                cursor: pointer;
+                box-shadow: 2px 3px 3px lightslategray;
+                transition: transform 1s ease, box-shadow 1.5s ease;
+            }
+            .formulaire input:hover{
+                transform: translateY(-5px);
+            }
+            
+            .formulaire select{
+                display: flex;
+            border-radius: 10px;
+            padding: 10px 20px;
+                width: 20rem;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1rem;
+            color: rgb(109, 110, 110);
+            border: 0.5px solid rgb(212, 219, 219);
+            cursor: pointer; 
+            }
+            .formulaire a{
+                display:flex;
+                justify-content: center;
+                text-decoration: none;
+                color: white;
+                background-color: rgb(109, 110, 110);
+                padding: 10px;
+                margin: 0 auto;
+                border-radius: 25px;
+                transition: transform 1s ease, box-shadow 1.5s ease;
+            }
+            .formulaire a:hover{
+                transform: translateY(-5px);
+                box-shadow: 2px 3px 3px lightslategray;
+                color: black;
+            }
+
+
+        </style>
+        <body>
+            
+            <H4>LOGIN</H4>
+
+            <div class="formulaire">
+                
+                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Prénom" >
+                <input type="password" placeholder="Mot de passe" >
+                <select name="genre" id="">
+                    <option value="">Homme</option>
+                    <option value="">Femme</option>
+
+                </select>
+
+                <a href="#">Connexion</a>
+                <marquee><p>BIENVENU </p></marquee>
+            
+            </div>
+            <hr>
+        </body>
+{% endblock %}      

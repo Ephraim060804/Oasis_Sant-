@@ -1,0 +1,417 @@
+
+{% extends 'base.html' %}
+
+{% block Contener %}
+
+        <style>
+            body{
+                background-color: #f1fdf2;
+                font-family: monospace;
+                font-size: 1rem;
+
+            }
+
+            .image{
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+                z-index: 0;
+                width: 600px;
+                height: auto;
+                margin: 0 auto;
+            }
+            .image img{
+                display: flex;
+                border-radius: 25px;
+                width: 1000px;
+                justify-content: center;
+
+            }
+
+            .block{
+                display: flex;
+                justify-content: center;
+                z-index: 3;
+                gap: 30px;
+                text-align: justify;
+                flex-wrap: wrap;
+                padding-top: 0%;
+            }
+            .block .blocks{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                margin: 0;
+                border: 1px solid lightgray;
+                padding: 10px;
+                border-top-left-radius: 20px;
+                background-color: white;
+                box-shadow: 2px 3px 4px rgb(192, 226, 159);
+                transition: transform 1s ease;
+            
+
+            }
+
+            .block .blocks:hover{
+                transform: translateY(-10px);
+                cursor: pointer;
+
+            }
+            .block .blocks a{
+                text-decoration: none;
+                color: black;
+            }
+            .tableaux{
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                flex-wrap: wrap;
+                padding-top: 50px;
+
+            }
+            .text{
+                display:flex;
+                justify-content: center;
+                
+            }
+            .text h5{
+                border: 1px solid lightgrey;
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                font-weight: bold;
+                font-style: oblique;
+                background-color: white; 
+                color: rgb(70, 70, 70);
+                text-shadow: 1px 1px 1px rgb(117, 117, 117);   
+            }
+            .tableau table th{
+                background-color: rgb(212, 219, 219);
+                padding: 10px;
+                
+
+            }
+        
+            .tableau table {
+                border: 1px solid rgb(212, 219, 219);
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            .tableau table a{
+                background-color: lightgray;
+                padding: 10px;
+                border-radius: 30px;
+                text-decoration: none;
+            }
+            .tableau table a:hover{
+                box-shadow: 2px 3px 6px rgb(57, 58, 58);
+            }
+            tr:nth-last-child(odd) td{
+                background-color:rgb(239, 243, 243);;
+            }
+            tr:hover td{
+                cursor: pointer;
+                background-color: rgb(211, 214, 214);
+            }
+
+
+        </style>
+        <body>
+
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/ecran-pharma.png') }}" alt="">
+        </div>
+    
+        <div class="block">
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table1"><h4>Anti-infectieux</h4></a> 
+                <p>Contre les microbes</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table1"><h4>Neurologie & Psychiatrie</h4></a>  
+                <p>Système Nerveux</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table2"><h4>Cardiologie & Vaisseaux</h4></a>  
+                <p>Cœur et Sang</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table2"><h4>Gastro-Entérologie</h4></a>   
+                <p>Appareil Digestif</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table3"><h4>Pneumologie & Allergologie</h4></a>  
+                <p>Voies Respiratoires</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table3"><h4>Rhumatologie & Inflammation</h4></a>  
+                <p>Squelette et Muscles</p>
+            </div>
+            <div class="blocks">
+            <a href="{{ url_for('Pharmacie') }}#table4"><h4>Métabolisme, Hormones & Prévention</h4></a>  
+                <p>fonction vitale</p>
+            </div>
+        </div>
+            <div class="tableaux">
+        
+                    <div class="tableau" id="table1">
+                        <div class="text">
+                            <h5>Les Anti-infectieux (Contre les microbes)</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table1">
+                        <div class="text">
+                            <h5>Neurologie & Psychiatrie</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table2">
+                        <div class="text">
+                            <h5>Cardiologie & Vaisseaux</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table2">
+                        <div class="text">
+                            <h5>Gastro-Entérologie</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table3">
+                        <div class="text">
+                            <h5>Pneumologie & Allergologie</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table3">
+                        <div class="text">
+                            <h5>Rhumatologie & Inflammation</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                    <div class="tableau" id="table4">
+                        <div class="text">
+                            <h5>Métabolisme, Hormones & Prévention</h5>
+                        </div>
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Fonction</th>
+                                    <th>Option</th>
+                                    
+                                </tr>
+                    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antibiotiques</td>
+                                    <td>Contre les bactéries</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiviraux</td>
+                                    <td>Contre les virus</td>
+                                    <td><a href="">decouvrir</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Antifongiques</td>
+                                    <td>Contre les champignons (mycoses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Antiparasitaires</td>
+                                    <td>Contre les parasites</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+
+            </div>
+
+        </body>
+
+{% endblock %}    
