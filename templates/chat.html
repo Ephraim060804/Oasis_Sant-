@@ -1,62 +1,116 @@
-<style>
-   body{
-    
-    background-color: #bcfac1;
-    display: flex;
-    gap: 10px;
-    
-   
-   }
-  
-   .chat input{
-    padding: 15px;
-    border-radius: 20px;
-    font-family: monospace;
-    font-size: 1rem;
-    border: 1px solid #00ff1586;
-    margin-top: 60vh;
-    display: flex;
-    justify-content: center;
-    margin-left: 15rem;
-    width: 750px;
-    justify-content: center;
-    box-shadow: 3px 3px 3px  #bbbbbb86;
-   }
-   .envoie{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30vh;
-   }
-   .envoie input{
-    border:1px solid #00ff1586;
-    height: 47px;
-    width: 47px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-family: baloo;
-    color: #0e5e1486;
-    box-shadow: 3px 3px 3px  #bbbbbb86;
-    transition: transform 1s ease, box-shadow 1s ease;
-   }
-   
-   .envoie input:hover{
-    box-shadow: 3px 3px 3px  #80808086;
-    transform: translateY(-8px)
-    
-   }
-  
-  
-</style>
+
+{% extends "profil_base.html" %}
 
 
-<body>
-    <div class="chat">
-        <input type="text" placeholder="Ecrivez un text">
-    </div>
-    <div class="envoie">
-        <input type="submit" value=">>">
-    </div>
+{% block ContenerTwo %}
+
+        <style>
+        body{
+            background-color: #f1fdf2;
+
+        }
+        .Text_center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                width: 300px;
+                height: auto;
+                border-radius: 40px;
+                box-shadow: 
+                    1px 2px 4px rgba(170, 165, 165, 0.8),
+                    1px -2px 4px rgba(185, 180, 180, 0.8) ;
+
+                margin: 20px auto;    
+
+        }
+        h1{
+            font-family: monospace;
+            font-size: 3rem;
+            color: #c5ffc5;
+            text-shadow: 
+            1px 1px 0px rgba(170, 165, 165, 0.8),
+            -1px -1px 0px rgba(167, 166, 166, 0.8);
+
+        }
+        .barre_input{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            padding-top: 200px;
+            
+        }
+        .chat{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            margin-left: 50px;
+        }
+
+        .chat input{
+            border: none;
+            border-radius: 30px;
+            padding: 15px;
+            font-family: monospace;
+            background-color: #c5ffc5;
+            box-shadow: 
+            1px 1px 0px rgba(170, 165, 165, 0.8),
+            -1px -1px 0px rgba(167, 166, 166, 0.8);
+            
+            width: 600px;
+            transition: all O.3s;
+
+        }
+
+        .chat input:focus{
+            outline: none;
+            border-color: #489148;
+        }
+        .chat button{
+            background-color: #c5ffc5;
+            border: none;
+            box-shadow: 
+                1px 1px 0px rgba(170, 165, 165, 0.8),
+                -1px -1px 0px rgba(167, 166, 166, 0.8);
+            border-radius: 30px;
+            font-family: baloo;
+            text-shadow: 
+                1px 1px 0px rgba(170, 165, 165, 0.8),
+                -1px -1px 0px rgba(167, 166, 166, 0.8);
+            
+            color: #67ac67;
+            transition: transform 1s ease;
+            width: 50px;
+            
+        }
+
+        .chat button:hover{
+            background-color: #a1ffa1;
+            color: #489148;
+            transform: translateX(-8px);
+            
+        }
+
+        
+        
+        </style>
 
 
-</body>
+        <body>
+
+            <div class="Text_center">
+                <h1>Chat Bot</h1>
+            </div>
+            <div class="barre_input">
+                <div class="chat">
+                    <input type="text" placeholder="Ecrivez un text">   
+                    <button type="submit">>></button>
+                </div>  
+                
+            </div>
+        
+
+
+        </body>
+{% endblock %}        

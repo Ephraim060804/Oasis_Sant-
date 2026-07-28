@@ -19,7 +19,11 @@ def Pharmacie():
 
 @app.route('/profil')
 def Profil():
-    return render_template('profil_base.html')
+    return render_template('chat.html')
+
+@app.route('/chat')
+def Chat():
+    return render_template("chat.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

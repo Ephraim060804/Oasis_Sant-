@@ -1,0 +1,351 @@
+
+<style>
+
+    body{
+        display: flex;
+        gap: 50px;
+        font-family: monospace;
+        background-color: #cdf7d1;
+    }
+
+   
+    .Stat_perso{
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+        display: flex;
+        gap: 50px;
+        padding: 30px;
+        margin-top: 30px ;
+        flex-wrap: wrap;
+        width: 250px;
+        margin-left: 40px;
+        border-left: 2px solid green;
+    }
+    .Stat_perso h1{
+        border-bottom: 1px solid green;
+        border-top: 1px solid green;
+        justify-content: center;
+        display: flex;
+    }
+    .name_first{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+    }
+    .name_first h1{
+        background-color: #cdf7d1;
+        padding: 28px;
+        border-radius: 50px;
+        color: rgb(119, 109, 2);
+        border: 1px solid grey;
+        transition: transform 1s ease;
+    }
+    .name_first h1:hover{
+        transform: rotate(360deg);
+        cursor: pointer;
+    }
+    .name_first h2{
+        padding-top: 29px;
+    }
+    .name_first h4{
+        display: flex;
+        justify-content: center;
+        border: 1px solid #cdf7d1;
+        background-color: #cdf7d1;
+        border-radius: 10px;
+        padding: 20px;
+        border-left: 3px solid green;
+        transition: transform 0.5s ease-out;
+    }
+    .name_first h4:hover{
+            transform: translateX(7px);
+            cursor: pointer;
+    }
+
+    .constante_recent{
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+    }
+    .constante_recent .blocks{
+        background-color: #cdf7d1;
+        padding: 10px;
+        border-radius: 20px;
+        border-top: 3px solid green;
+        border-bottom: 3px solid green;
+        transition: transform 1s ease;
+    }
+    .constante_recent .blocks:hover{
+        transform: translateY(7px);
+        cursor: pointer;
+    }
+    .allergie{
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        background-color:white ;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+         border-left: 2px solid green;
+        
+
+    }
+    .allergie .allergie1{
+        background-color: #cdf7d1;
+        border-radius: 20px;
+        text-align: center;
+        transition: transform 0.5s ease-in;
+    }
+
+    .allergie .allergie1:hover{
+        transform:scaleX(0);
+        cursor: pointer;
+
+    }
+
+    .allergie .allergie1 h3{
+        background-color: #a6ffaf;
+      
+        
+    }
+    .allergie .allergie2{
+        background-color: #cdf7d1;
+        padding-left: 3px;
+        border-radius: 20px;
+        transition: transform 0.5s;
+    }
+
+    .allergie .allergie2:hover{
+        cursor: pointer;
+        transform: scaleY(0);
+    }
+    .allergie .allergie2 h3{
+         background-color:#a6ffaf;
+         
+  
+
+    }
+    .spetialiste{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 30px;   
+        gap: 20px; 
+         box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+        height: 1000px;
+        border-left: 2px solid green;
+    }
+    .spetialiste .medecins{
+         box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+        border-radius: 30px;
+        justify-content: center;
+        display: inline-block;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        transition: transform 1s ease;
+        
+    }
+    .spetialiste .medecins:hover{
+            transform: translateY(-7px);
+    }
+
+    .spetialiste .medecins1{
+          box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+        border-radius: 30px;
+        justify-content: center;
+        display: inline-block;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        transition: transform 1s ease;
+    }
+      .spetialiste .medecins1:hover{
+            transform: translateY(-7px);
+    }
+
+     .spetialiste .medecins1 h1{
+         background-color: #cdf7d1;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        color: rgb(119, 109, 2);
+         box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+     }
+
+    
+    .spetialiste .medecins h1{
+        background-color: #cdf7d1;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        color: rgb(119, 109, 2);
+         box-shadow: 
+        2px 3px 2px  rgb(182, 182, 182);
+        
+    }
+    .spetialiste .medecins h5{
+        background-color: #a6ffaf;
+        padding: 4px;
+        justify-content: center;
+        display: flex;
+        border-radius: 20px;
+        border-left: 1px solid green;
+        border-right:1px solid green ;
+    }
+    .spetialiste .medecins1 h5{
+         background-color: rgb(171, 157, 1);
+        padding: 4px;
+        justify-content: center;
+        display: flex;
+        border-radius: 20px;
+        border-left: 2px solid rgb(71, 53, 4);
+        border-right:2px solid  rgb(71, 53, 4) ;
+    }
+    .spetialiste .medecins a{
+        border: 1px solid #8ef598;
+        padding: 3px;
+        border-radius: 10px;
+        text-transform:uppercase;
+        font-weight: bold;
+        transition: transform 1s ease;
+    }    
+    .spetialiste .medecins a:hover{
+        border: 1px solid #30fc44 ;
+     
+
+    }
+     .spetialiste .medecins1 a{
+        border: 1px solid #8ef598;
+        padding: 3px;
+        border-radius: 10px;
+        text-transform:uppercase;
+        font-weight: bold;
+        transition: transform 1s ease;
+    }   
+     .spetialiste .medecins1 a:hover{
+        border: 1px solid #30fc44 ;
+    } 
+
+
+
+
+</style>
+<body>
+    <div class="Stat_perso">
+        <div class="name_first">
+            <h1>MN</h1>
+            <h2>MABIALA Nathan</h2>
+            <h4>40 Ans<br>
+                 Quartier: Siafoumou </h4>          
+        </div>
+
+
+        <h1>Constantes récentes</h1>
+        <div class="constante_recent">
+            
+            <div class="blocks">
+                <h1>12.8</h1>
+                <h5>Tesion(cmHg)</h5>
+            </div>
+            <div class="blocks">
+                <h1>72</h1>
+                <h5>BPM</h5>
+            </div>
+            <div class="blocks">
+                <h1>37.2°</h1>
+                <h5>Temperature</h5>
+            </div>
+        </div>
+        <div class="allergie">
+            <div class="allergie1">
+                <h3>Allergie Connues</h3>
+                <h5>Penicine, Arachide</h5>
+            </div>
+
+            <div class="allergie2">
+                <h3>Traitement en cours</h3>
+                <h4>Paludisme</h4>
+                <ul>
+                    <li>Arthemetère 1600mg/jour</li>
+                    <li>Cotrime 1920mg/jour</li>
+                    <li>doliprane 2000mg/jour</li>
+                    <li>Skyzol</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="spetialiste">
+       <div class="text">
+
+          
+       </div>
+         <div class="medecins1">
+            <h1>GB</h1>
+            <h2>Dr. Germain Bikindou</h2>
+            <h3>Médecine générale</h3>
+            <h4>12 ans d'experience</h4>
+            <h5>indisponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+         <div class="medecins">
+            <h1>PMT</h1>
+            <h2>Dr. Pélagie Mboungou-Tsoumou</h2>
+            <h3>Cardiologie</h3>
+            <h4>10 ans d'experience</h4>
+            <h5>Disponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+         <div class="medecins">
+            <h1>RN</h1>
+            <h2>Dr. Rodrigue Ngatséké</h2>
+            <h3>Dermatologie</h3>
+            <h4>5 ans d'experience</h4>
+            <h5>Disponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+         <div class="medecins1">
+            <h1>BMK</h1>
+            <h2>Dr. Blandine Makosso-Kouka</h2>
+            <h3>Pédiatrie</h3>
+            <h4>8 ans d'experience</h4>
+            <h5>indisponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+         <div class="medecins">
+            <h1>HTM</h1>
+            <h2>Dr.  Hervé Tchicaya-Mboumba</h2>
+            <h3>Gynécologie obstétrique</h3>
+            <h4>10 ans d'experience</h4>
+            <h5>Disponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+         <div class="medecins">
+            <h1>RIN</h1>
+            <h2>Dr. Reine Itoua-Ndinga</h2>
+            <h3>Psychiatrie</h3>
+            <h4>3 ans d'experience</h4>
+            <h5>Disponible</h5>
+            <a>Choisir ce Médecin</a>            
+        </div>
+    </div>
+</body>

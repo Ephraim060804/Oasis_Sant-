@@ -14,7 +14,7 @@
                     width: 39vh;
                     height: 100%;
                     background-color:#f1fdf2;
-                    box-shadow: 2px 3px 6px #aff3b5; 
+                    box-shadow: 2px 3px 6px #c2f1c6; 
                     position: fixed;
                
                }
@@ -41,7 +41,7 @@
           <div class="Liens">
 
                <div class="lien_lat">
-                    <a href="">Chat Bot</a>
+                    <a href="{{ url_for('Chat') }}">Chat Bot</a>
                </div>
 
                <div class="lien_lat">
@@ -56,6 +56,17 @@
                <a href=""> Historique de Consultations</a> 
 
                </div>
+          </div>
+
+           <div class="container">
+        
+               <main>
+                    {% block ContenerTwo %}
+                    
+                    
+
+                    {% endblock %}
+               </main>
           </div>
 
           </body>
