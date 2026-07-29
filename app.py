@@ -33,6 +33,10 @@ def Dash():
 def Consultation():
     return render_template('consultation.html')
 
+@app.route('/historique de consultation')
+def History():
+    return render_template('historique_consul.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
     
