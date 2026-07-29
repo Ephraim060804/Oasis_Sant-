@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+
+{% block Contener %}
+ <style>
+        body{
+            background-color: #cdf7d1;
+            margin: 30px;
+        }
+        .clic{
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+            padding: 5px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .clic a{
+             text-decoration: none;
+             color: white;
+             background-color: green;
+             padding: 10px;
+             border-radius: 10px;
+             transition: transform 1s ease;
+        }
+        .clic a:hover{
+            transform: translateY(-5px);
+        }
+
+        .ensemble{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 1px 2px 3px rgb(137, 137, 137);
+            padding: 20px;
+            border-radius: 20px;
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .ensemble h2{
+            display: flex;
+            justify-content: center;
+            border-left: 1px solid green;
+            border-right: 1px solid green;
+            padding: 2px;
+            border-radius: 5px;
+            color: green;
+            font-family: monospace;
+        }
+        .formulaire{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-left:2px solid green;
+            border-radius: 10px;
+            background-color: rgb(228, 249, 228);
+            padding: 10px;
+        }
+        .formulaire input{
+            outline:none;
+            border: 1px solid green;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 
+            1px 1px 2px lightgrey,
+            -1px -1px 2px rgb(171, 169, 169);
+            font-family: monospace;
+            width: 300px;
+            color: green;
+        }
+        .formulaire select{
+            outline:none;
+            border: 1px solid green;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 
+            1px 1px 2px lightgrey,
+            -1px -1px 2px rgb(171, 169, 169);
+            font-family: monospace;
+            font-weight: bold;
+            color: green;
+        }
+        .symptomes{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .symptomes button{
+            border-radius: 10px;
+            border: 1px solid green;
+            color:green;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: rgb(172, 249, 172);
+            transition:transform 1s ease
+        }
+        .symptomes button:hover{
+               transform: translateY(-5px);
+               background-color: rgb(220, 247, 220);
+               cursor: pointer;
+        }
+        .tableau table{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            font-family: monospace;
+            text-align: center;
+        }
+        th{
+            background-color: rgb(172, 249, 172);
+            color: rgb(78, 77, 77);
+            font-family: monospace;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        table th{
+            text-align: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            background-color:rgb(172, 249, 172);
+            padding: 10px;
+            margin-left: 20px;
+        }
+        tr td{
+            border: 1px solid rgb(184, 245, 184);
+        }
+        td:hover{
+            background-color: #a8f9b0;
+            cursor: pointer;
+        }
+        tr:nth-last-child(odd) td{
+            background-color: #cdf7d1;
+
+        }
+        .bouton button{
+            background-color:rgb(172, 249, 172);
+            border: 1px solid green;
+            padding: 10px;
+            display:flex;
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: transform 1s ease;
+            display: grid;
+            margin: 20px auto;
+            
+
+        }
+        .bouton:hover button{
+            background-color: #cdf7d1;
+            transform: translateY(-7px);
+            box-shadow: 2px 4px 6px lightgray;
+            cursor: pointer;
+        }
+        
+
+
+
+       
+    </style>
+   <body>
+    <div class="clic">
+        <a href="">Mon historique</a>
+        <a href="{{ url_for('Dash') }}#medecin">Dr disponible</a>
+    </div>
+    <div class="ensemble">
+
+        <div class="formulaire">
+            <input type="text" placeholder="Nom & Prénom">
+            <input type="text" placeholder="+242 xx xxx xx xx">
+            <input type="date" placeholder="Date">
+            <select name="Qartier" id="" placeholder="Quartier">
+                <option value="">Mongo - Mpoukou </option>
+                <option value="">Siafoumou </option>
+                <option value="">Tchiali</option>
+                <option value="">Rafinerie </option>
+                <option value="">Songolo </option>
+                <option value="">Louandjili </option>
+                <option value="">Mvou-Mvou </option>
+    
+            </select>
+            <select name="" id="">
+                <option value="">Choix du médecin</option>
+                <option value="">Dr. Reine Itoua-Ndinga</option>
+                <option value="">Dr. Pélagie Mboungou-Tsoumou</option>
+                <option value="">Dr. Rodrigue Ngatséké</option>
+                <option value="">Dr.  Hervé Tchicaya-Mboumba</option>
+                <option value="">Dr. Blandine Makosso-Kouka</option>
+                <option value="">Dr. Germain Bikindou</option>
+            </select>
+        </div>
+        <h2> symptomes</h2>
+        <div class="symptomes">
+            
+            <button>Courbatures et maux de tête intenses</button>
+            <button>Nez qui coule ou bouché</button>
+            <button>Mal de gorge léger</button> 
+            <button>Toux légère</button>
+            <button>Nausées et vomissements</button>
+            <button>Douleurs abdominales</button>
+            <button>Mal de gorge intense</button>
+            <button>Fièvre</button>
+            <button>Ganglions sensibles dans le cou</button>
+            <button>Toux d'abord sèche, puis grasse</button>
+            <button>Gêne respiratoire ou sifflements légers</button>
+            <button>Nez bouché, écoulement nasal épais</button>
+            <button>Sensation de pression dans le visage</button>
+            <button>Sensibilité à la lumière et au bruit</button>
+            <button>Brûlures en urinant</button>
+
+        </div>
+        <h2>Docteur disponible</h2>
+        <div class="tableau">
+            <table>
+                
+                    <tr>
+                        <th>Nom</th>
+                        <th>Specialité</th>
+                    </tr>
+              
+                
+                    <tr>
+                        <td>Dr. Reine Itoua-Ndinga</td>
+                        <td>Psychiatrie</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Pélagie Mboungou-Tsoumou</td>
+                        <td>Cardiologie</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Rodrigue Ngatséké</td>
+                        <td>Dermatologie</td>
+                    </tr>
+                    <tr>
+                        <td>Dr.  Hervé Tchicaya-Mboumba</td>
+                        <td>Gynécologie obstétrique</td>
+                    </tr>
+                
+
+            </table>
+           
+        </div>
+        
+    </div>
+     <div class="bouton">
+            <button>Envoyer</button>
+        </div>
+   </body>
+ 
+{% endblock %}

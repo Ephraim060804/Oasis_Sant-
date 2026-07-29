@@ -84,6 +84,11 @@
         .connexion .CLIC:hover a {
             color: #018d08;
         }
+        .connexion .CLIC:focus a{
+                 border: 1px solid #018d08;
+                 outline: 3px solid blue;
+
+        }
 
       
         @media screen and (max-width: 1024px) {
@@ -193,7 +198,7 @@
             <a href="{{ url_for('Pharmacie') }}">Phrarmacie</a>
         </div>
         <div class="CLIC">
-            <a href="#">Consultation</a>
+            <a href="{{ url_for('Consultation') }}">Consultation</a>
         </div>
     </div>
     <div class="deco">

@@ -25,6 +25,14 @@ def Profil():
 def Chat():
     return render_template("chat.html")
 
+@app.route('/dashboard')
+def Dash():
+    return render_template('dashboard.html')
+
+@app.route('/consultation')
+def Consultation():
+    return render_template('consultation.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
     
